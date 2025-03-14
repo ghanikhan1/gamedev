@@ -1,0 +1,20 @@
+@use "../base/variables" as *;
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: $border-radius;
+    font-size: 16px;
+    text-align: center;
+    transition: background 0.3s ease;
+
+    &--primary {
+        background: black;
+        color: white;
+    }
+
+    &--outline {
+        border: 2px solid $primary-color;
+        color: $primary-color;
+    }
+}

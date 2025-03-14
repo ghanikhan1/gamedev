@@ -1,0 +1,20 @@
+@use "../base/variables" as *;
+
+.dark-mode {
+    background-color: #111;
+    color: white;
+}
+
+.dark-mode .header {
+    background: #222;
+}
+
+.dark-mode .card {
+    background: #333;
+    border-color: #444;
+    color: white;
+}
+
+.dark-mode .btn--primary {
+    background: #444;
+}
