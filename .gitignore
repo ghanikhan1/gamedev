@@ -4,9 +4,9 @@
 /public/hot
 /public/storage
 /public/js/
-/public/*/css
-/public/*/fonts
-/public/*/images
+/public/css
+/public/fonts
+/public/images/
 /storage/*.key
 /vendor
 .env
