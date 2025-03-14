@@ -39,12 +39,17 @@ export const images = () => {
     return gulp
         .src(paths.images)
         .pipe(imagemin([
-            mozjpeg({ quality: 75, progressive: true }), // ✅ Use separate mozjpeg import
-            optipng({ optimizationLevel: 5 }), // ✅ Use separate optipng import
-            svgo({ plugins: [{ removeViewBox: false }] }) // ✅ Use separate svgo import
+            mozjpeg({ quality: 75, progressive: true }),
+            optipng({ optimizationLevel: 5 }),
+            svgo({
+                plugins: [
+                    { name: 'removeViewBox', active: false } // ✅ Correct way to specify svgo plugin
+                ]
+            })
         ]))
         .pipe(gulp.dest(paths.imagesDest));
 };
+
 
 // ✅ Process JavaScript (Minify and Bundle)
 export const js = () => {
